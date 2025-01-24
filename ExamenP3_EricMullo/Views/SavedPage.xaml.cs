@@ -1,9 +1,11 @@
-using ExamenTercerProgreso_Eric.ViewModels;
-public partial class SavedPage : ContentPage
+namespace ExamenP3_EricMullo.Views
 {
-    public SavedPage(SavedViewModel viewModel)
+    public partial class SavedPage : ContentPage
     {
-        InitializeComponent();
-        BindingContext = viewModel;
+        public SavedPage(ExamenTercerProgreso_Eric.ViewModels.SavedViewModel viewModel)
+        {
+            InitializeComponent();
+            BindingContext = viewModel;
+        }
     }
 }

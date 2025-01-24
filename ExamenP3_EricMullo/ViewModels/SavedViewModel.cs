@@ -1,8 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using ExamenTercerProgreso_Eric.Models;
-using ExamenTercerProgreso_Eric.Database;
+
+using ExamenP3_EricMullo.Database;
+using ExamenP3_EricMullo.Models;
 namespace ExamenTercerProgreso_Eric.ViewModels
 {
     public class SavedViewModel : INotifyPropertyChanged
