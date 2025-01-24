@@ -1,7 +1,7 @@
 using ExamenTercerProgreso_Eric.ViewModels;
-public partial class SavedPage : ContentPage
+public partial class MainPage : ContentPage
 {
-    public SavedPage(SavedViewModel viewModel)
+    public MainPage(MainViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;

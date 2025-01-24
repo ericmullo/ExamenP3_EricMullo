@@ -1,25 +1,17 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace ExamenP3_EricMullo
+﻿using ExamenTercerProgreso_Eric.Services;
+using ExamenTercerProgreso_Eric.Database;
+using ExamenTercerProgreso_Eric.ViewModels;
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
-
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
-
-            return builder.Build();
-        }
+        var builder = MauiApp.CreateBuilder();
+        // Configuración de dependencias
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "aeropuertos.db");
+        builder.Services.AddSingleton(new DatabaseService(dbPath));
+        builder.Services.AddSingleton<ApiService>();
+        builder.Services.AddSingleton<MainViewModel>();
+        builder.Services.AddSingleton<SavedViewModel>();
+        return builder.Build();
     }
 }
