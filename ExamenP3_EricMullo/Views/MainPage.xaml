@@ -1,9 +1,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            x:Class="ExamenP3_EricMullo.Views.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenP3_EricMullo.Views.MainPage">
     <StackLayout>
-        <Entry x:Name="Emullo_entry" Placeholder="Ingrese un país" />
-        <Button Text="Buscar" Clicked="OnBuscarClicked" />
-        <Button Text="Limpiar" Clicked="OnLimpiarClicked" />
-        <Label x:Name="Emullo_labelResultado" />
+        <Entry x:Name="emullo_entryPais" Placeholder="Ingrese un país" />
+        <Button Text="Buscar" x:Name="emullo_btnBuscar" Clicked="OnBuscarClicked" />
+        <Button Text="Limpiar" x:Name="emullo_btnLimpiar" Clicked="OnLimpiarClicked" />
+        <Label x:Name="emullo_lblResultado" />
     </StackLayout>
 </ContentPage>

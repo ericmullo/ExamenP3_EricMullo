@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExamenP3_EricMullo.Models
+﻿namespace ExamenP3_EricMullo.Models
 {
-    public class Aereopuerto
+    public class Aeropuerto
     {
         public int Id { get; set; }
-        public String Nombre { get; set; }
-        public String Pais { get; set; }
-        public double latitud { get; set; }
-        public String Email { get; set; }
-        public String Emullo { get; set; }
-
+        public string Nombre { get; set; }
+        public string Pais { get; set; }
+        public double Latitud { get; set; }
+        public double Longitud { get; set; }
+        public string Email { get; set; }
+        public string Emullo { get; set; } 
     }
 }
