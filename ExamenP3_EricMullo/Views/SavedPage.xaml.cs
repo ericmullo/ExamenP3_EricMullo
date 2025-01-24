@@ -7,5 +7,5 @@ namespace ExamenP3_EricMullo.Views
             InitializeComponent();
             BindingContext = viewModel;
         }
-    }
+    }     
 }

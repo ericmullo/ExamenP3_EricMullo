@@ -8,7 +8,7 @@
     Title="ExamenP3_EricMullo">
 
     <TabBar>
-        <ShellContent Title="Buscar" ContentTemplate="{DataTemplate views:MainPage}"/>
+        <ShellContent Title="Buscar" ContentTemplate="{DataTemplate views:MainPage }"/>
         <ShellContent Title="Guardados" ContentTemplate="{DataTemplate views:SavedPage}"/>
     </TabBar>
         

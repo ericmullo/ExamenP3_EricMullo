@@ -2,17 +2,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExamenP3_EricMullo.Views.MainPage">
     <StackLayout Padding="20">
-
-        <!-- Entrada de texto para el país -->
+        <!-- Entrada de texto -->
         <Entry x:Name="emullo_entryPais" Placeholder="Ingrese un país" />
 
         <!-- Botón Buscar -->
-        <Button Text="Buscar"
-                Clicked="OnBuscarClicked" />
+        <Button Text="Buscar" Clicked="OnBuscarClicked" />
 
         <!-- Botón Limpiar -->
-        <Button Text="Limpiar"
-                Clicked="OnLimpiarClicked" />
+        <Button Text="Limpiar" Clicked="OnLimpiarClicked" />
 
         <!-- Resultado -->
         <Label x:Name="emullo_lblResultado"

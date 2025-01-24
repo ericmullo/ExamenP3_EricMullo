@@ -5,7 +5,6 @@
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Views.MainPage()); // Define la página principal
         }
     }
 }
