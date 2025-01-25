@@ -1,4 +1,6 @@
-﻿using Microsoft.Maui.Hosting;
+﻿using ExamenP3_EricMullo.Repositories;
+
+using Microsoft.Extensions.Logging;
 
 namespace ExamenP3_EricMullo
 {
@@ -7,7 +9,6 @@ namespace ExamenP3_EricMullo
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
@@ -16,8 +17,17 @@ namespace ExamenP3_EricMullo
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            // Registro de MainPage
-            builder.Services.AddSingleton<Views.MainPage>();
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
+
+            // Assembler reference for the AirportRepository
+            string dbPath = System.IO.Path.Combine(FileSystem.AppDataDirectory, "ariel_anchapaxi.db3");
+
+            builder.Services.AddSingleton<AirportRepository>(s => ActivatorUtilities.CreateInstance<AirportRepository>(s, dbPath));
+
+            // Assembler reference for the APIRepository
+            builder.Services.AddSingleton<APIRepository>();
 
             return builder.Build();
         }

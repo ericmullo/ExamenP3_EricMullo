@@ -7,7 +7,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArielAnchapaxiP3.Repositories
+namespace ExamenP3_EricMullo.Repositories
 {
     public class APIRepository
     {
@@ -25,7 +25,7 @@ namespace ArielAnchapaxiP3.Repositories
 
                     if (response.IsSuccessStatusCode)
                     {
-                        List<AeropuertoModel> responseAsList = (await response.Content.ReadFromJsonAsync<List<AirportModel>>())!;
+                        List<AeropuertoModel> responseAsList = (await response.Content.ReadFromJsonAsync<List<AeropuertoModel>>())!;
 
                         var firstAirport = responseAsList.FirstOrDefault();
 

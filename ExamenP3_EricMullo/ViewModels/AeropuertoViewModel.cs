@@ -15,7 +15,7 @@ using System.Windows.Input;
 
 namespace ExamenP3_EricMullo.ViewModels
 {
-    public class AirportViewModel : INotifyPropertyChanged
+    public class AeropuertoViewModel : INotifyPropertyChanged
     {
         //private readonly APIRepository _repository;
         private AeropuertoModel _airport = new AeropuertoModel();
@@ -65,7 +65,7 @@ namespace ExamenP3_EricMullo.ViewModels
         }
 
 
-        public AirportViewModel()
+        public AeropuertoViewModel()
         {
             // _/repository = new APIRepository();
             GetAirportCommand = new Command(GetAirport);
@@ -75,7 +75,7 @@ namespace ExamenP3_EricMullo.ViewModels
 
         public async void GetAirport()
         {
-            airport = await App._apiRepository.GetResponseAPI(currentNameAirport);
+            airport = await App._APIRepository.GetResponseAPI(currentNameAirport);
 
             if (airport != null)
             {

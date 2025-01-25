@@ -5,7 +5,7 @@
              x:Class="ExamenP3_EricMullo.Views.APInfoPage">
 
     <ContentPage.BindingContext>
-        <local:AirportViewModel/>
+        <local:AeropuertoViewModel/>
     </ContentPage.BindingContext>
 
     <ScrollView>

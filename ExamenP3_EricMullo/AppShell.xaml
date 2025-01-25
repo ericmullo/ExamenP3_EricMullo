@@ -3,14 +3,22 @@
     x:Class="ExamenP3_EricMullo.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ExamenP3_EricMullo"
-    Shell.FlyoutBehavior="Disabled"
-    Title="ExamenP3_EricMullo">
+    xmlns:local="clr-namespace:ExamenP3_EricMullo.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="EricMulloP3">
 
-    <TabBar>
-        <ShellContent Title="Buscar" ContentTemplate="{DataTemplate views:MainPage }"/>
-        <ShellContent Title="Guardados" ContentTemplate="{DataTemplate views:SavedPage}"/>
-    </TabBar>
-        
+    <FlyoutItem Title="Examen P3">
+        <ShellContent
+            x:Name="ShellContent1_Eric"
+            Title="API Info"
+            ContentTemplate="{DataTemplate local:APInfoPage}"
+            Route="APInfoPage" />
+
+        <ShellContent
+            x:Name="ShellContent2_Eric"
+            Title="Eric Mullo"
+            ContentTemplate="{DataTemplate local:EricMullo}"
+            Route="EricMullo" />
+    </FlyoutItem>
 
 </Shell>

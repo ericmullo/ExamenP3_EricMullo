@@ -6,7 +6,7 @@
              Title="Eric Mullo">
 
     <ContentPage.BindingContext>
-        <local:BDViewModel/>
+        <local:InfoDBViewModel/>
     </ContentPage.BindingContext>
 
     <VerticalStackLayout Spacing="20" Padding="20">
@@ -26,23 +26,23 @@
                     <ViewCell>
                         <Frame Padding="10" Margin="5" BorderColor="Gray" CornerRadius="10">
                             <StackLayout Orientation="Vertical">
-                                <Label x:Name="Ariel_Label1" Text="{Binding name, StringFormat='Nombre: {0}'}" 
+                                <Label x:Name="Eric_Label1" Text="{Binding name, StringFormat='Nombre: {0}'}" 
                                 FontSize="18" 
                                 FontAttributes="Bold"
                                 TextColor="Black"/>
-                                <Label x:Name="Ariel_Label2" Text="{Binding country, StringFormat='País: {0}'}" 
+                                <Label x:Name="Eric_Label2" Text="{Binding country, StringFormat='País: {0}'}" 
                             FontSize="16" 
                             TextColor="DarkBlue"/>
-                                <Label x:Name="Ariel_Label3" Text="{Binding latitude, StringFormat='Latitud: {0}'}" 
+                                <Label x:Name="Eric_Label3" Text="{Binding latitude, StringFormat='Latitud: {0}'}" 
                             FontSize="14" 
                             TextColor="Black"/>
-                                <Label x:Name="Ariel_Label4" Text="{Binding longitude, StringFormat='Longitud: {0}'}" 
+                                <Label x:Name="Eric_Label4" Text="{Binding longitude, StringFormat='Longitud: {0}'}" 
                             FontSize="14" 
                             TextColor="Black"/>
-                                <Label x:Name="Ariel_Label5" Text="{Binding email, StringFormat='Correo: {0}'}" 
+                                <Label x:Name="Eric_Label5" Text="{Binding email, StringFormat='Correo: {0}'}" 
                             FontSize="14" 
                             TextColor="Black"/>
-                                <Label x:Name="Ariel_Label6" Text="{Binding personName, StringFormat='AAnchapaxi: {0}'}" 
+                                <Label x:Name="Eric_Label6" Text="{Binding personName, StringFormat='EMullo: {0}'}" 
                             FontSize="14" 
                             TextColor="Black"/>
                             </StackLayout>

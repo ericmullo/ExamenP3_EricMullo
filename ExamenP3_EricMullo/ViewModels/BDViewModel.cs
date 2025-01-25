@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace ArielAnchapaxiP3.ViewModels
+namespace ExamenP3_EricMullo.ViewModels
 {
     public class InfoDBViewModel : INotifyPropertyChanged
     {
@@ -37,7 +37,7 @@ namespace ArielAnchapaxiP3.ViewModels
 
         public void GetAllAirports()
         {
-            airports = new ObservableCollection<SoporteModel>(App._airportRepository.GetAllAirports());
+            airports = new ObservableCollection<SoporteModel>(App._AeropuertoRepository.GetAllAirports());
             OnPropertyChanged(nameof(airports));
         }
 
