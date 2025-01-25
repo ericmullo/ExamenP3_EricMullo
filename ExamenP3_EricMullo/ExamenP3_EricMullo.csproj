@@ -65,16 +65,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\SavedPage.xaml.cs">
-	    <DependentUpon>SavedPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Views\MainPage.xaml">
+	  <MauiXaml Update="Views\APInfoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\SavedPage.xaml">
+	  <MauiXaml Update="Views\EricMullo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -9,6 +9,6 @@ namespace ExamenP3_EricMullo.Interfaces
 {
     internal interface IAPIRepository
     {
-        public Task<AirportModel> GetResponseFromAPi(string name);
+        public Task<AeropuertoModel> GetResponseFromAPi(string name);
     }
 }

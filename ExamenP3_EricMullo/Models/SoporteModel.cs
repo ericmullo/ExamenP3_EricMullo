@@ -3,7 +3,8 @@
 namespace ExamenP3_EricMullo.Models
 {
     [Table("airport")]
-    public class AirportSupportedModel
+
+    public class SoporteModel
     {
         [PrimaryKey]
         public int id { get; set; }

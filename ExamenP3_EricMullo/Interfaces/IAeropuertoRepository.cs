@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ExamenP3_EricMullo.Interfaces
 {
-    internal interface IAirportRepository
+    internal interface IAeropuertoRepository
     {
-        public Task<bool> SaveInSQLite(AirportModel airport);
-        public Task<IEnumerable<AirportModel>> GetAllAirports(AirportModel airport);
+        public Task<bool> SaveInSQLite(AeropuertoModel airport);
+        public Task<IEnumerable<AeropuertoModel>> GetAllAirports(AeropuertoModel airport);
     }
 }

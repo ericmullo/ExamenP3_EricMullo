@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExamenP3_EricMullo.ViewModels"
+             x:Class="ExamenP3_EricMullo.Views.EricMullo"
+             Title="Eric Mullo">
+
+    <ContentPage.BindingContext>
+        <local:BDViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Spacing="20" Padding="20">
+
+        <Button x:Name="Eric_GetAllAirportsButton"
+                Text="Ver todos los Aeropuertos"
+                Command="{Binding GetAirportListCommand}" />
+
+        <ListView x:Name="Eric_AirportListView"
+          ItemsSource="{Binding airports}"
+          HasUnevenRows="True"
+          CachingStrategy="RecycleElement"
+          Margin="10">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Padding="10" Margin="5" BorderColor="Gray" CornerRadius="10">
+                            <StackLayout Orientation="Vertical">
+                                <Label x:Name="Ariel_Label1" Text="{Binding name, StringFormat='Nombre: {0}'}" 
+                                FontSize="18" 
+                                FontAttributes="Bold"
+                                TextColor="Black"/>
+                                <Label x:Name="Ariel_Label2" Text="{Binding country, StringFormat='País: {0}'}" 
+                            FontSize="16" 
+                            TextColor="DarkBlue"/>
+                                <Label x:Name="Ariel_Label3" Text="{Binding latitude, StringFormat='Latitud: {0}'}" 
+                            FontSize="14" 
+                            TextColor="Black"/>
+                                <Label x:Name="Ariel_Label4" Text="{Binding longitude, StringFormat='Longitud: {0}'}" 
+                            FontSize="14" 
+                            TextColor="Black"/>
+                                <Label x:Name="Ariel_Label5" Text="{Binding email, StringFormat='Correo: {0}'}" 
+                            FontSize="14" 
+                            TextColor="Black"/>
+                                <Label x:Name="Ariel_Label6" Text="{Binding personName, StringFormat='AAnchapaxi: {0}'}" 
+                            FontSize="14" 
+                            TextColor="Black"/>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

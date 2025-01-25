@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamenP3_EricMullo.Models
 {
-    public class AirportModel
+    public class AeropuertoModel
     {
         public int id { get; set; }
         public string name { get; set; }
